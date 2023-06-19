@@ -1,6 +1,8 @@
+'''Aqui damos el comando para que si se selecciona la opcion mostrar catalogo salga todo el contenido'''
+
 import menu
 
-
+#Menu para seleccion
 def mostrar_menu():
     while True:
         print("Menú mostrar catálogo")
@@ -27,6 +29,7 @@ def mostrar_menu():
             return
         else:
             print("Seleccione una opción válida.")
+
 
 
 def mostrar_peliculas():
