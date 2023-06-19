@@ -179,7 +179,8 @@ Este código es una función que permite eliminar un producto del catálogo. Vea
 En resumen, este código implementa una función que permite eliminar un producto del catálogo. Itera sobre los productos del catálogo y compara el título de cada producto con el título ingresado por el usuario. Si se encuentra un producto con el título coincidente, se elimina de la lista de productos. Si no se encuentra un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
 
 4. file
-Este código parece definir dos funciones relacionadas con la carga y el guardado de un catálogo en un archivo. Veamos el código línea por línea para entenderlo mejor:
+   
+Este código  define dos funciones relacionadas con la carga y el guardado de un catálogo en un archivo. Veamos el código línea por línea para entenderlo mejor:
 
  `import menu`: Importa un módulo llamado `menu`. Este módulo probablemente contiene la definición de la variable `menu_productos`, que es donde se almacenan los productos del catálogo.
 
