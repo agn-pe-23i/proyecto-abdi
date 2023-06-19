@@ -297,39 +297,7 @@ En el siguiente diagrama también se muestra los diferentes módulos:
 
 ![diagrama 2](https://github.com/agn-pe-23i/proyecto-abdi/assets/125155934/9b4f143e-5c3e-4052-94f5-4d5190a95f39)
 
-+-------------------+
-|  menu_principal() |
-+-------------------+
-        |
-        |   +------------------+
-        +-->| agregar_producto()|
-        |   +------------------+
-        |
-        |   +-----------------+
-        +-->| buscar_producto()|
-        |   +-----------------+
-        |
-        |   +------------------+
-        +-->| eliminar_producto()|
-        |   +------------------+
-        |
-        |   +-----------------+
-        +-->| mostrar_catalogo()|
-        |   +-----------------+
-        |
-        |   +----------------+
-        +-->| cargar_catalogo()|
-        |   +----------------+
-        |
-        |   +----------------+
-        +-->| guardar_catalogo()|
-        |   +----------------+
-        |
-        |
-        +---[Salida]
 
-
-        Para que el diagrama se vea de forma completa, favor de abrir como si se fuera a editar.
         
 El diagrama muestra la función menu_principal() como el punto de entrada y la función principal que controla el flujo del programa. Desde menu_principal(), se puede acceder a varias opciones, cada una de las cuales corresponde a una función específica que realiza una operación particular.
 Las opciones disponibles son:
