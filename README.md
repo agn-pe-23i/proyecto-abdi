@@ -182,6 +182,8 @@ Estas funciones y estructuras de datos trabajan en conjunto para brindar la func
              |  ...             |  | ...               |  |              |
              +-----------+  +-------------+  +--------------+
 
+
+
 En el siguiente diagrama también se muestra los diferentes módulos:
             +-------------------+
         |      menu_principal() |
