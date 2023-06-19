@@ -3,13 +3,22 @@
 UNIVERSIDAD AUTÓNOMA METROPOLITANA  "UNIDAD   CUAJIMALPA"
 # Trabajo Final: Informe Proyecto
 LICENCIATURA: INGENIERÍA EN COMPUTACIÓN 
+
+
 UEA: *PROGRAMACIÓN ESTRUCTURADA*
 
 *ALUMNAS:*
+
+
 Daniela Nava Martínez     MATRÍCULA: 2223028762
+
+
 Abigail Sánchez López     MATRÍCULA: 2223068506
 
-*PROFESOR:* Abel García Nájera
+*PROFESOR:* 
+
+
+Abel García Nájera
 
 
 # RESUMEN
