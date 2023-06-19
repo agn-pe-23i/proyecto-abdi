@@ -185,9 +185,10 @@ Estas funciones y estructuras de datos trabajan en conjunto para brindar la func
 
 
 En el siguiente diagrama también se muestra los diferentes módulos:
-            +-------------------+
-        |      menu_principal() |
-            +-------------------+
+
++-------------------+
+|  menu_principal() |
++-------------------+
         |
         |   +------------------+
         +-->| agregar_producto()|
@@ -215,7 +216,7 @@ En el siguiente diagrama también se muestra los diferentes módulos:
         |
         |
         +---[Salida]
-
+        
         
 El diagrama muestra la función menu_principal() como el punto de entrada y la función principal que controla el flujo del programa. Desde menu_principal(), se puede acceder a varias opciones, cada una de las cuales corresponde a una función específica que realiza una operación particular.
 Las opciones disponibles son:
