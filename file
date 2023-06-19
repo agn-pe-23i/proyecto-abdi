@@ -1,0 +1,21 @@
+import menu
+
+def cargar_catalogo():
+    nombre_archivo = input("Ingrese el nombre del archivo: ")
+    try:
+        with open(nombre_archivo, "r") as archivo:
+            menu.menu_productos = eval(archivo.read())
+        print("El catálogo se ha cargado.")
+    except FileNotFoundError:
+        print("catalogo no existe.")
+    except:
+        print("Ocurrió un error.")
+
+def guardar_catalogo():
+    nombre_archivo = input("Ingrese el nombre del archivo: ")
+    try:
+        with open(nombre_archivo, "w") as archivo:
+            archivo.write(str(menu.menu_productos))
+        print("Se ha guardado correctamente.")
+    except:
+        print("Ocurrió un error.")
