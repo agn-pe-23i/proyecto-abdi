@@ -295,6 +295,8 @@ Estas funciones y estructuras de datos trabajan en conjunto para brindar la func
 
 En el siguiente diagrama también se muestra los diferentes módulos:
 
+![diagrama 2](https://github.com/agn-pe-23i/proyecto-abdi/assets/125155934/9b4f143e-5c3e-4052-94f5-4d5190a95f39)
+
 +-------------------+
 |  menu_principal() |
 +-------------------+
