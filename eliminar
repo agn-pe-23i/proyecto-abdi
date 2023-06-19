@@ -1,0 +1,12 @@
+import menu
+
+def eliminar_producto():
+    titulo = input("Ingrese el título del producto que desea eliminar: ")
+
+    for producto in menu.menu_productos:
+        if producto["Título"] == titulo:
+            menu.menu_productos.remove(producto)
+            print("El producto fue eliminado.")
+            return
+
+    print("No se encontró producto.")
