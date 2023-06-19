@@ -1,3 +1,4 @@
+''' aqui importamos el catologo y damos un menu en el que pueden seleccionar la opcion que desean ejecutar. para que puedan ingresar los datos de'''
 import menu
 
 
