@@ -1,9 +1,12 @@
+'''en este modulo se utilizan ciertas funciones para buscar productos dentro del catalogo.'''
+
 import menu
 
 def buscar_producto():
     clave = input("Ingrese palabra clave: ")
     resultados = []
 
+#Aqui buscamos el producto ingresado en el catalogo
     for producto in menu.menu_productos:
         if clave.lower() in producto["Título"].lower():
             resultados.append(producto)
