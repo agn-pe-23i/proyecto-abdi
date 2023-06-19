@@ -216,7 +216,9 @@ En el siguiente diagrama también se muestra los diferentes módulos:
         |
         |
         +---[Salida]
-        
+
+
+        Para que el diagrama se vea de forma completa, favor de abrir como si se fuera a editar.
         
 El diagrama muestra la función menu_principal() como el punto de entrada y la función principal que controla el flujo del programa. Desde menu_principal(), se puede acceder a varias opciones, cada una de las cuales corresponde a una función específica que realiza una operación particular.
 Las opciones disponibles son:
