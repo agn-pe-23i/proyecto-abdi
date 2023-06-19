@@ -1,3 +1,4 @@
+"""Para estse modulo se ocupa importar el menu para seleccionar el elminiar y seguimos con la funcion .remove para quitarlo del catalogo"""
 import menu
 
 def eliminar_producto():
