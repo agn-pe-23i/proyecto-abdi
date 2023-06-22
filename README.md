@@ -348,41 +348,17 @@ La función *"menu_principal"* es el punto de entrada del programa y muestra el 
 Estas funciones y estructuras de datos trabajan en conjunto para brindar la funcionalidad completa del programa y gestionar eficientemente el catálogo de productos.
 
 
-En el siguiente diagrama también se muestra los diferentes módulos:
-
-![diagrama 2](https://github.com/agn-pe-23i/proyecto-abdi/assets/125155934/9b4f143e-5c3e-4052-94f5-4d5190a95f39)
-
-
-        
-El diagrama muestra la función menu_principal() como el punto de entrada y la función principal que controla el flujo del programa. Desde menu_principal(), se puede acceder a varias opciones, cada una de las cuales corresponde a una función específica que realiza una operación particular.
-Las opciones disponibles son:
-
-
-*agregar_producto():* Permite al usuario agregar un nuevo producto al catálogo.
-
-
-*buscar_producto():* Permite al usuario buscar un producto en el catálogo según palabras clave.
-
-
-
-*eliminar_producto():* Permite al usuario eliminar un producto específico del catálogo.
-
-
-*mostrar_catalogo():* Muestra al usuario diferentes opciones para ver el catálogo, incluyendo películas, series, documentales, eventos deportivos y el catálogo completo.
-
-
-*cargar_catalogo():* Permite al usuario cargar un catálogo existente desde un archivo.
-
-
-*guardar_catalogo():* Permite al usuario guardar el catálogo actual en un archivo.
-
-
 *Salida:* Finaliza el programa y muestra un mensaje de despedida.
 
 
 Cada función realiza las operaciones correspondientes y luego vuelve a menu_principal() para que el usuario pueda seleccionar otra opción o salir del programa.
 
 ![diagrama_completo](https://github.com/agn-pe-23i/proyecto-abdi/assets/125592302/06288ef5-3eb6-42d2-b6db-f5e1746ce369)
+
+
+Después de que el programa a sido separado por los módulos *main, buscar eliminar, file, menu y mostrar*, el diagrama se aprecia de la siguiente manera: 
+![diagrama_modulos](https://github.com/agn-pe-23i/proyecto-abdi/assets/125592302/50439f8e-bc14-441f-803b-8e3f48c264c2)
+
 
 # COMENTARIO
 Durante el desarrollo del proyecto final, nos enfrentamos a diversas dificultades. Inicialmente, al escribir los códigos, a pesar de estos desafíos, perseveramos y mejoramos nuestro código.
@@ -421,3 +397,4 @@ El bloque *try-except-else-finally*: El bloque *try* se utiliza para probar un b
 
 
 La instrucción *return*: La instrucción *return* se utiliza para finalizar la ejecución de una función y "devolver" un resultado al llamador de la función. Al utilizar *return*, se puede especificar un valor o una expresión que se desea devolver como resultado de la función. Después de la instrucción *return*, no se ejecutarán más líneas de código dentro de la función. Si no se proporciona ninguna expresión después de *return*, se devuelve el valor especial *None*. La instrucción *return* es comúnmente utilizada para obtener resultados de una función y permitir que se realicen acciones basadas en esos resultados en el código que llamó a la función.
+
