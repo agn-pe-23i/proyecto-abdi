@@ -364,51 +364,6 @@ La función *"menu_principal"* es el punto de entrada del programa y muestra el 
 
 Estas funciones y estructuras de datos trabajan en conjunto para brindar la funcionalidad completa del programa y gestionar eficientemente el catálogo de productos.
 
-                             +------------------+
-                             |  cargar_catalog| 
-                             +------------------+
-                                       |
-                                      V
-                                   +--try--+
-                                    |        |
-                                   V        |
-                             +-----------+  |
-                             |                |  |
-                             |  catalog  |  |
-                             |                |  |
-                             +-----+-----+  |
-                                    |         |
-                                   V        |
-                             +-----+-----+  |
-                             |                |  |
-                             |   input     |  |
-                             |                |  |
-                             +-----+-----+  |
-                                   |          |
-                                   V        |
-                             +-----+-----+  |
-                             |                |  |
-                             |   open     |  |
-                             |                |  |
-                             +-----+-----+  |
-                                   |          |
-                                   V         |
-                    +------------+--------+------+
-                    |             |               |
-                    V             V               V
-               +----+----+  +-----+-----+  +------+------+
-               | Película |  |   Serie   |  | Documental |   ... (diferentes tipos)
-               +----+----+  +-----+-----+  +------+------+
-                    |             |               |
-                    V             V               V
-             +------+-----+  +------+------+ +------+-----+
-             |  tipo          |  | título          |  | ...          |   ... (atributos específicos)
-             |  título        |  | actor_prin  |  |              |
-             |  actor_…  |  | director      |  |              |
-             |  ...             |  | ...               |  |              |
-             +-----------+  +-------------+  +--------------+
-
-
 
 En el siguiente diagrama también se muestra los diferentes módulos:
 
@@ -444,7 +399,7 @@ Las opciones disponibles son:
 
 Cada función realiza las operaciones correspondientes y luego vuelve a menu_principal() para que el usuario pueda seleccionar otra opción o salir del programa.
 
-![diagrama_1](https://github.com/agn-pe-23i/proyecto-abdi/assets/125592302/061692a6-07de-4f03-b343-6e1e745b8acb)
+![diagrama_completo](https://github.com/agn-pe-23i/proyecto-abdi/assets/125592302/06288ef5-3eb6-42d2-b6db-f5e1746ce369)
 
 # COMENTARIO
 Durante el desarrollo del proyecto final, encontramos que el primer código, considerado como el código principal, resultó relativamente sencillo. En esta sección, se presentan opciones como buscar, eliminar, mostrar, cargar y guardar productos en el catálogo. Al ejecutar este código, los usuarios tenían la oportunidad de interactuar con el catálogo de productos.
@@ -454,6 +409,7 @@ Sin embargo, enfrentamos mayores dificultades al trabajar en el segundo código,
 
 
 Inicialmente, teníamos poca claridad sobre cómo desarrollar el segundo catálogo. Nos surgieron preguntas sobre la cantidad de ejemplos de cada producto a incluir y cómo traducirlos adecuadamente al código.
+
 
 
 Para superar estos obstáculos, realizamos una exhaustiva investigación y recopilamos información adicional. A medida que adquirimos más conocimientos, pudimos determinar la estructura del segundo catálogo y encontrar la forma adecuada de representarlo en código.
