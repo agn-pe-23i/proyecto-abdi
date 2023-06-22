@@ -402,20 +402,16 @@ Cada función realiza las operaciones correspondientes y luego vuelve a menu_pri
 ![diagrama_completo](https://github.com/agn-pe-23i/proyecto-abdi/assets/125592302/06288ef5-3eb6-42d2-b6db-f5e1746ce369)
 
 # COMENTARIO
-Durante el desarrollo del proyecto final, encontramos que el primer código, considerado como el código principal, resultó relativamente sencillo. En esta sección, se presentan opciones como buscar, eliminar, mostrar, cargar y guardar productos en el catálogo. Al ejecutar este código, los usuarios tenían la oportunidad de interactuar con el catálogo de productos.
+Durante el desarrollo del proyecto final, nos enfrentamos a diversas dificultades. Inicialmente, al escribir los códigos, a pesar de estos desafíos, perseveramos y mejoramos nuestro código.
+
+Decidimos estructurar el proyecto en diferentes módulos. El principal, que contiene todos los módulos, se encarga de gestionar el catálogo. Los módulos se dividen en agregar producto, buscar producto, eliminar producto y archivo para cargar y guardar el catálogo en un archivo.
 
 
-Sin embargo, enfrentamos mayores dificultades al trabajar en el segundo código, el cual no se reflejaba directamente en el primero. Esta etapa se convirtió en nuestro mayor desafío, ya que no sabíamos cómo abordar su implementación.
+El módulo "agregar producto" nos permite incluir películas, series, documentales o eventos deportivos que no estén en el catálogo. El módulo "buscar producto" nos permite buscar elementos existentes en el catálogo mediante una palabra clave. El módulo "eliminar" se encarga de eliminar productos del catálogo. El módulo "archivo" nos ayuda con la carga y el guardado del catálogo en un archivo.
 
 
-Inicialmente, teníamos poca claridad sobre cómo desarrollar el segundo catálogo. Nos surgieron preguntas sobre la cantidad de ejemplos de cada producto a incluir y cómo traducirlos adecuadamente al código.
+Además, el programa principal presenta un menú que nos permite agregar nuevos productos. El sexto módulo, llamado "mostrar", se encarga de mostrar el catálogo. Nos dimos cuenta en que los módulos antes mencionados se podían agrupar, por lo que quedaron de la siguiente manera con la misma función: *buscar y eliminar, file, menú y mostrar*. Durante la integración de estos módulos en el programa principal, enfrentamos algunas dificultades, ya que en ocasiones no se reconocían correctamente y no obteníamos los resultados esperados. Sin embargo, finalmente logramos cumplir con nuestro objetivo.
 
-
-
-Para superar estos obstáculos, realizamos una exhaustiva investigación y recopilamos información adicional. A medida que adquirimos más conocimientos, pudimos determinar la estructura del segundo catálogo y encontrar la forma adecuada de representarlo en código.
-
-
-Aunque enfrentamos dificultades iniciales y tuvimos dudas sobre cómo abordar ciertos aspectos del proyecto, logramos superar los obstáculos y encontrar soluciones adecuadas gracias a nuestra perseverancia y dedicación. A medida que avanzamos en nuestro aprendizaje, adquirimos confianza y nos sentimos más cómodas al implementar el segundo código.
 
 
 # IMPLEMENTACIÓN
