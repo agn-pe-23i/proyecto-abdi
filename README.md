@@ -43,7 +43,7 @@ Un servicio de streaming busca actualizar su sistema de renta y venta de pelícu
 
 
 El sistema deberá contar con una interfaz de usuario intuitiva y amigable que permita la manipulación correcta y completa del catálogo de productos. Para lograr esto, se implementará una serie de menús que facilitarán la navegación y manipulación de la información.
-En primer lugar, el sistema proporcionará un menú principal que presentará las opciones disponibles, como *"Buscar", "Agregar", "Editar" y "Eliminar"*. Estas opciones permitirán al usuario realizar diferentes acciones sobre el catálogo de productos.
+En primer lugar, el sistema proporcionará un menú principal que presentará las opciones disponibles, como *"Buscar", "Agregar", "Mostrar" y "Eliminar"*. Estas opciones permitirán al usuario realizar diferentes acciones sobre el catálogo de productos.
 
 
 En resumen, el servicio de streaming necesita actualizar su sistema de renta y venta de productos. El nuevo sistema contará con un catálogo completo y actualizado, y permitirá interactuar con él a través de una serie de menús que facilitarán la manipulación correcta y completa de los productos. Estos menús incluirán opciones para buscar, agregar, editar y eliminar productos, entre otras funcionalidades relevantes para el correcto funcionamiento del servicio.
