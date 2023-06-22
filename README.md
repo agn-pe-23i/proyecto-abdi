@@ -113,7 +113,7 @@ Además, las películas, las series y los documentales tienen un costo de renta 
 
 # DOCUMENTACIÓN
 
-1. Agregar:
+ __1. AGREGAR:__
 Este código parece ser un fragmento de un programa que maneja un menú de opciones para agregar diferentes tipos de productos a un catálogo.
 
 
@@ -131,8 +131,7 @@ Las funciones *agregar_pelicula*, *agregar_serie*, *agregar_documental* y *agreg
 En resumen, este código muestra un menú interactivo donde el usuario puede seleccionar diferentes tipos de productos para agregar a un catálogo. Cada tipo de producto tiene su propia función para solicitar la información necesaria y agregarla al catálogo.
 
 
-
-2. Buscar.
+ __2. BUSCAR:__
 Este código es una función que permite buscar productos en un catálogo utilizando una palabra clave.
 
 
@@ -174,7 +173,7 @@ Itera sobre cada producto en la lista *resultados* y muestra información releva
 En resumen, este código implementa una función que permite buscar productos en un catálogo utilizando una palabra clave. Itera sobre los productos del catálogo y compara la palabra clave con el título de cada producto. Los productos que coincidan se almacenan en una lista de resultados y se muestran al usuario. Si no se encuentran productos que coincidan, se muestra un mensaje indicando que no se encontraron resultados.
 
 
-3. Eliminar. 
+ __3. ELIMINAR:__
 Este código es una función que permite eliminar un producto del catálogo. 
 
 
@@ -208,7 +207,7 @@ Este código es una función que permite eliminar un producto del catálogo.
 En resumen, este código implementa una función que permite eliminar un producto del catálogo. Itera sobre los productos del catálogo y compara el título de cada producto con el título ingresado por el usuario. Si se encuentra un producto con el título coincidente, se elimina de la lista de productos. Si no se encuentra un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
 
 
- 4. File
+ __4. FILE:__
 Este código define dos funciones relacionadas con la carga y el guardado de un catálogo en un archivo. 
 
 
@@ -269,7 +268,7 @@ Este código define dos funciones relacionadas con la carga y el guardado de un 
 En resumen, este código define dos funciones: *cargar_catalogo()* para cargar un catálogo desde un archivo y sobrescribir el contenido anterior del catálogo, y *guardar_catalogo()* para guardar el catálogo actual en un archivo. Ambas funciones manejan excepciones para mostrar mensajes de error en caso de problemas durante la carga o el guardado del catálogo.
 
 
-5. Menú:
+ __5. MENU:__
 Este código implementa un menú interactivo para agregar nuevos productos a una lista llamada *menu_productos*. Los productos pueden ser películas, series, documentales o eventos deportivos en vivo.
 El código comienza definiendo una lista vacía llamada *menu_productos* que se utilizará para almacenar los productos ingresados por el usuario.
 A continuación, se definen varias funciones para agregar diferentes tipos de productos:
@@ -296,7 +295,7 @@ Cada función de agregar producto imprime un mensaje indicando que el producto h
 En general, este código permite al usuario agregar productos a la lista *menu_productos* seleccionando el tipo de producto y proporcionando los detalles específicos de cada tipo de producto.
 
 
-6. Mostrar.
+ __6. MOSTRAR:__
 Este código implementa un menú interactivo para mostrar el catálogo de productos. El catálogo es proporcionado por el módulo *menu* (que no se muestra en el código proporcionado, pero contiene una lista llamada *menu_productos* con los productos).
 El código define varias funciones para mostrar diferentes categorías de productos:
 
@@ -316,7 +315,7 @@ La función *print_producto(producto)* imprime los detalles de un producto espec
 En resumen, este código permite al usuario seleccionar diferentes categorías de productos para mostrar en el catálogo, incluyendo la opción de mostrar todo el catálogo completo. Cada categoría se muestra con sus respectivos detalles y se indica si no hay productos en esa categoría.
 
 
-__7. Main__
+ __7. MAIN:__
 Este código implementa un programa principal que utiliza diferentes módulos para realizar operaciones en un catálogo de productos. A continuación, se explica el flujo del programa:
 
 
