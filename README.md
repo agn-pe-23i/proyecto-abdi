@@ -316,7 +316,7 @@ La función *print_producto(producto)* imprime los detalles de un producto espec
 En resumen, este código permite al usuario seleccionar diferentes categorías de productos para mostrar en el catálogo, incluyendo la opción de mostrar todo el catálogo completo. Cada categoría se muestra con sus respectivos detalles y se indica si no hay productos en esa categoría.
 
 
-7. Main
+__7. Main__
 Este código implementa un programa principal que utiliza diferentes módulos para realizar operaciones en un catálogo de productos. A continuación, se explica el flujo del programa:
 
 
