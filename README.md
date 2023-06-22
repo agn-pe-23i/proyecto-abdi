@@ -113,111 +113,112 @@ Además, las películas, las series y los documentales tienen un costo de renta 
 
 # DOCUMENTACIÓN
 
- __1. AGREGAR:__
-Este código parece ser un fragmento de un programa que maneja un menú de opciones para agregar diferentes tipos de productos a un catálogo.
+ __1. MAIN:__
+Este código implementa un programa principal que utiliza diferentes módulos para realizar operaciones en un catálogo de productos. A continuación, se explica el flujo del programa:
 
 
-*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenarán los productos agregados.
+Se importan los módulos necesarios para que el programa pueda funcionar. Los módulos importados son *eliminar, mostrar, menu, buscar, agregar y file*. Estos módulos contienen las funciones y lógica necesaria para realizar operaciones específicas en el catálogo de productos.
 
 
-*-def obten_num(msj):* Define una función llamada obten_num que recibe un mensaje (msj) como argumento. Esta función solicita al usuario que ingrese un valor y verifica si el valor ingresado puede ser convertido a un número (en formato float). Si se puede convertir, devuelve el número; de lo contrario, muestra un mensaje de error y solicita nuevamente al usuario que ingrese un número válido.
+Se define la función *menu_principal()* que muestra el menú principal del programa. El menú presenta varias opciones para seleccionar, como agregar un producto, buscar un producto, eliminar un producto, mostrar el catálogo, cargar el catálogo desde un archivo y guardar el catálogo en un archivo. Además, hay una opción para salir del programa. El usuario selecciona una opción ingresando el número correspondiente.
 
 
-*-def menu_agregar():* Define una función llamada menu_agregar que muestra un menú de opciones para agregar productos. El usuario debe seleccionar una opción y se ejecutará una función correspondiente según la opción seleccionada. Si la opción seleccionada es "5", la función retorna y vuelve al menú principal.
+La función *ejecutar_opcion(opcion)* recibe la opción seleccionada por el usuario y ejecuta la operación correspondiente según la opción seleccionada. Cada opción invoca la función correspondiente del módulo respectivo. Por ejemplo, si la opción es "1", se llama a la función *agregar.menu_agregar()* del módulo *agregar* para agregar un producto al catálogo.
 
 
-Las funciones *agregar_pelicula*, *agregar_serie*, *agregar_documental* y *agregar_evento_deportivo* son funciones que se llaman desde la función *menu_agregar* dependiendo de la opción seleccionada por el usuario en el menú. Estas funciones solicitan al usuario que ingrese información específica sobre el tipo de producto que se desea agregar (como título, actor principal, director, etc.). Luego, crean un diccionario con la información ingresada y lo agregan a la lista *menu.menu_productos*, que es una variable definida en el módulo menu importado anteriormente.
-
-En resumen, este código muestra un menú interactivo donde el usuario puede seleccionar diferentes tipos de productos para agregar a un catálogo. Cada tipo de producto tiene su propia función para solicitar la información necesaria y agregarla al catálogo.
+La función *main()* es el punto de entrada del programa. Se ejecuta en un bucle infinito hasta que el usuario seleccione la opción "7" para salir. Dentro del bucle, se muestra el menú principal, se obtiene la opción seleccionada y se ejecuta esa opción llamando a *ejecutar_opcion(opcion)*. Si la opción seleccionada es "7", se rompe el bucle y el programa finaliza.
 
 
- __2. BUSCAR:__
-Este código es una función que permite buscar productos en un catálogo utilizando una palabra clave.
+La sentencia *if __name__ == "__main__"*: asegura que el código dentro de main() se ejecute solo si el módulo se ejecuta como programa principal. Esto evita que el código se ejecute si el módulo se importa en otro lugar.
+En resumen, este código crea un programa principal que interactúa con el usuario a través de un menú y utiliza diferentes módulos para realizar operaciones en un catálogo de productos, como agregar, buscar, eliminar, mostrar y gestionar el catálogo en archivos.
+
+__2. BUSCAR_ELIMINAR:__
+Para la primera parte de este módulo tenemos que buscar:
+Este código es una función que permite buscar productos en un catálogo utilizando una palabra clave. 
 
 
-*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
+*-import menu*: Importa un módulo llamado *menu*. Este módulo contiene la definición de la variable *menu_productos*, que es donde se almacenan los productos del catálogo.
 
 
-*-def buscar_producto():* Define una función llamada buscar_producto. Esta función permite al usuario ingresar una palabra clave para buscar productos en el catálogo.
+*-def buscar_producto()*: Define una función llamada *buscar_producto*. Esta función permite al usuario ingresar una palabra clave para buscar productos en el catálogo.
 
 
-*-clave = input("Ingrese palabra clave: "):* Solicita al usuario que ingrese una palabra clave para realizar la búsqueda. La palabra clave se guarda en la variable clave.
+*-clave = input("Ingrese palabra clave: ")*: Solicita al usuario que ingrese una palabra clave para realizar la búsqueda. La palabra clave se guarda en la variable *clave*.
 
 
-*-resultados = []:* Crea una lista vacía llamada resultados donde se almacenarán los productos que coincidan con la búsqueda.
+*-resultados = []*: Crea una lista vacía llamada *resultados* donde se almacenarán los productos que coincidan con la búsqueda.
 
 
-*-for producto in menu.menu_productos:* Itera sobre cada producto en la lista menu.menu_productos (que contiene los productos del catálogo).
+*-for producto in menu.menu_productos*: Itera sobre cada producto en la lista *menu.menu_productos* (que contiene los productos del catálogo).
 
 
-*-if clave.lower() in producto["Título"].lower():* Verifica si la palabra clave (en minúsculas) está presente en el título de cada producto del catálogo. La comparación se realiza en minúsculas para hacerla insensible a mayúsculas y minúsculas.
+*-if clave.lower() in producto["Título"].lower()*: Verifica si la palabra clave (en minúsculas) está presente en el título de cada producto del catálogo. La comparación se realiza en minúsculas para hacerla insensible a mayúsculas y minúsculas.
 
 
-*-resultados.append(producto):* Si el título del producto coincide con la palabra clave, se agrega el producto a la lista resultados.
+*-resultados.append(producto)*: Si el título del producto coincide con la palabra clave, se agrega el producto a la lista *resultados*.
 
 
 *-if len(resultados) > 0:*: Verifica si se encontraron resultados de la búsqueda (es decir, si la lista *resultados* no está vacía).
 
 
-
-*-print(f" Se encontraron {len(resultados)} resultado(s) que coinciden con la búsqueda:"):* Muestra un mensaje indicando la cantidad de resultados encontrados.
+*-print(f" Se encontraron {len(resultados)} resultado(s) que coinciden con la búsqueda:")*: Muestra un mensaje indicando la cantidad de resultados encontrados.
 Itera sobre cada producto en la lista *resultados* y muestra información relevante del producto, como el tipo y el título.
 
 
-*-else:*: Si no se encontraron resultados de la búsqueda, es decir, la lista resultados está vacía.
+*-else:*: Si no se encontraron resultados de la búsqueda, es decir, la lista *resultados* está vacía.
 
 
-*print*("No se encontraron productos con la búsqueda."): Muestra un mensaje indicando que no se encontraron productos que coincidan con la búsqueda.
+*-print("No se encontraron productos con la búsqueda.")*: Muestra un mensaje indicando que no se encontraron productos que coincidan con la búsqueda.
 
 
 En resumen, este código implementa una función que permite buscar productos en un catálogo utilizando una palabra clave. Itera sobre los productos del catálogo y compara la palabra clave con el título de cada producto. Los productos que coincidan se almacenan en una lista de resultados y se muestran al usuario. Si no se encuentran productos que coincidan, se muestra un mensaje indicando que no se encontraron resultados.
 
 
- __3. ELIMINAR:__
+Para la segunda parte de este módulo tenemos que *eliminar*:
 Este código es una función que permite eliminar un producto del catálogo. 
 
 
-*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
+*-import menu*: Importa un módulo llamado *menu*. Este módulo contiene la definición de la variable *menu_productos*, que es donde se almacenan los productos del catálogo.
 
 
-*-def eliminar_producto():* Define una función llamada eliminar_producto. Esta función permite al usuario ingresar el título del producto que desea eliminar del catálogo.
+*-def eliminar_producto()*: Define una función llamada *eliminar_producto*. Esta función permite al usuario ingresar el título del producto que desea eliminar del catálogo.
 
 
-*-titulo = input("Ingrese el título del producto que desea eliminar: "):* Solicita al usuario que ingrese el título del producto que desea eliminar. El título se guarda en la variable *titulo*.
+*-titulo = input("Ingrese el título del producto que desea eliminar: ")*: Solicita al usuario que ingrese el título del producto que desea eliminar. El título se guarda en la variable titulo.
 
 
-*-for producto in menu.menu_productos:*: Itera sobre cada producto en la lista *menu.menu_productos* (que contiene los productos del catálogo).
+*-for producto in menu.menu_productos:*: Itera sobre cada producto en la lista menu.menu_productos (que contiene los productos del catálogo).
 
 
 *-if producto["Título"] == titulo:*: Verifica si el título del producto actual coincide con el título ingresado por el usuario.
 
 
-*-menu.menu_productos.remove(producto):* Si se encuentra un producto con el título ingresado, se elimina el producto de la lista *menu.menu_productos* utilizando el método *remove()*.
+*menu.menu_productos.remove(producto)*: Si se encuentra un producto con el título ingresado, se elimina el producto de la lista menu.menu_productos utilizando el método remove().
 
 
-*-print("El producto fue eliminado."):* Muestra un mensaje indicando que el producto ha sido eliminado.
+*print("El producto fue eliminado.")*: Muestra un mensaje indicando que el producto ha sido eliminado.
 
 
-*-return:* Retorna de la función después de eliminar el producto. Esto evita que se siga iterando sobre los productos restantes en el catálogo.
+*-return*: Retorna de la función después de eliminar el producto. Esto evita que se siga iterando sobre los productos restantes en el catálogo.
 
 
-*-print("No se encontró producto."):* Si no se encontró un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
+*-print("No se encontró producto.")*: Si no se encontró un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
 
 
 En resumen, este código implementa una función que permite eliminar un producto del catálogo. Itera sobre los productos del catálogo y compara el título de cada producto con el título ingresado por el usuario. Si se encuentra un producto con el título coincidente, se elimina de la lista de productos. Si no se encuentra un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
 
 
- __4. FILE:__
+ __3. FILE:__
 Este código define dos funciones relacionadas con la carga y el guardado de un catálogo en un archivo. 
 
 
-*-import menu:* Importa un módulo llamado *menu*. Este módulo contiene la definición de la variable *menu_productos*, que es donde se almacenan los productos del catálogo.
+*-import menu*: Importa un módulo llamado *menu*. Este módulo contiene la definición de la variable *menu_productos*, que es donde se almacenan los productos del catálogo.
 
 
-*-def cargar_catalogo():* Define una función llamada *cargar_catalogo*. Esta función permite cargar un catálogo desde un archivo.
+*-def cargar_catalogo()*: Define una función llamada *cargar_catalogo*. Esta función permite cargar un catálogo desde un archivo.
 
 
-*-nombre_archivo = input("Ingrese el nombre del archivo: "):* Solicita al usuario que ingrese el nombre del archivo desde el cual se desea cargar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
+*-nombre_archivo = input("Ingrese el nombre del archivo: ")*: Solicita al usuario que ingrese el nombre del archivo desde el cual se desea cargar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
 
 
 *-try:*: Inicia un bloque try-except para manejar excepciones.
@@ -226,50 +227,52 @@ Este código define dos funciones relacionadas con la carga y el guardado de un 
 *-with open(nombre_archivo, "r") as archivo:*: Abre el archivo especificado por el nombre ingresado en modo de lectura ("r") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
 
 
-*-menu.menu_productos = eval(archivo.read()):* Lee el contenido del archivo y utiliza la función *eval()* para evaluarlo como una expresión de Python. Se asume que el contenido del archivo es una representación válida de la lista *menu.menu_productos*. El resultado de la evaluación se asigna a la variable *menu.menu_productos*, sobrescribiendo el contenido anterior del catálogo.
+*-menu.menu_productos = eval(archivo.read())*: Lee el contenido del archivo y utiliza la función eval() para evaluarlo como una expresión de Python. Se asume que el contenido del archivo es una representación válida de la lista *menu.menu_productos*. El resultado de la evaluación se asigna a la variable *menu.menu_productos*, sobrescribiendo el contenido anterior del catálogo.
 
 
-*-print("El catálogo se ha cargado."):* Muestra un mensaje indicando que el catálogo se ha cargado correctamente. *. except FileNotFoundError:*: Captura la excepción FileNotFoundError que se produce cuando el archivo especificado no se encuentra.
+*-print("El catálogo se ha cargado.")*: Muestra un mensaje indicando que el catálogo se ha cargado correctamente. *. except FileNotFoundError:*: Captura la excepción *FileNotFoundError* que se produce cuando el archivo especificado no se encuentra.
 
 
-*print("catalogo no existe."):* Muestra un mensaje indicando que el archivo del catálogo no existe.
+*-print("catalogo no existe.")*: Muestra un mensaje indicando que el archivo del catálogo no existe.
 
 
-*-except:*: Captura cualquier otra excepción que no sea FileNotFoundError.
+*-except:*: Captura cualquier otra excepción que no sea *FileNotFoundError*.
 
 
-*-print("Ocurrió un error."):* Muestra un mensaje genérico indicando que ocurrió un error al cargar el catálogo.
+*-print("Ocurrió un error.")*: Muestra un mensaje genérico indicando que ocurrió un error al cargar el catálogo.
 
 
-*-def guardar_catalogo():* Define una función llamada *guardar_catalogo*. Esta función permite guardar el catálogo en un archivo. 
+*-def guardar_catalogo()*: Define una función llamada guardar_catalogo. Esta función permite guardar el catálogo en un archivo. 
 
 
-*-nombre_archivo = input("Ingrese el nombre del archivo: "):* Solicita al usuario que ingrese el nombre del archivo en el cual se desea guardar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
+*-nombre_archivo = input("Ingrese el nombre del archivo: ")*: Solicita al usuario que ingrese el nombre del archivo en el cual se desea guardar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
 
 
 *-try:*: Inicia un bloque try-except para manejar excepciones.
 
 
-*-with open(nombre_archivo, "w") as archivo:*: Abre el archivo especificado por el nombre ingresado en modo de escritura ("w") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
+*-with open(nombre_archivo, "w") as archivo:*: Abre el archivo especificado por el nombre ingresado en modo de escritura ("w") utilizando el contexto *with*, lo que garantiza que el archivo se cierre correctamente al finalizar.
 
 
-*-archivo.write(str(menu.menu_productos)):* Escribe una representación en forma de cadena (str) de la lista *menu.menu_productos* en el archivo.
+*-archivo.write(str(menu.menu_productos))*: Escribe una representación en forma de cadena (str) de la lista *menu.menu_productos* en el archivo.
 
 
-*-print("Se ha guardado correctamente."):* Muestra un mensaje indicando que el catálogo se ha guardado correctamente en el archivo.
+*-print("Se ha guardado correctamente.")*: Muestra un mensaje indicando que el catálogo se ha guardado correctamente en el archivo.
 
 
-*-except:*: Captura cualquier excepción que se produzca durante el guardado del catálogo.
+*-except*:Captura cualquier excepción que se produzca durante el guardado del catálogo.
 
 
-*print("Ocurrió un error."):* Muestra un mensaje genérico indicando que ocurrió un error al guardar el catálogo.
+*-print("Ocurrió un error.")*: Muestra un mensaje genérico indicando que ocurrió un error al guardar el catálogo.
 
 
 En resumen, este código define dos funciones: *cargar_catalogo()* para cargar un catálogo desde un archivo y sobrescribir el contenido anterior del catálogo, y *guardar_catalogo()* para guardar el catálogo actual en un archivo. Ambas funciones manejan excepciones para mostrar mensajes de error en caso de problemas durante la carga o el guardado del catálogo.
 
 
- __5. MENU:__
+__4. MENU:__
 Este código implementa un menú interactivo para agregar nuevos productos a una lista llamada *menu_productos*. Los productos pueden ser películas, series, documentales o eventos deportivos en vivo.
+
+
 El código comienza definiendo una lista vacía llamada *menu_productos* que se utilizará para almacenar los productos ingresados por el usuario.
 A continuación, se definen varias funciones para agregar diferentes tipos de productos:
 
@@ -295,12 +298,12 @@ Cada función de agregar producto imprime un mensaje indicando que el producto h
 En general, este código permite al usuario agregar productos a la lista *menu_productos* seleccionando el tipo de producto y proporcionando los detalles específicos de cada tipo de producto.
 
 
- __6. MOSTRAR:__
+__5. MOSTRAR:__
 Este código implementa un menú interactivo para mostrar el catálogo de productos. El catálogo es proporcionado por el módulo *menu* (que no se muestra en el código proporcionado, pero contiene una lista llamada *menu_productos* con los productos).
 El código define varias funciones para mostrar diferentes categorías de productos:
 
 
-La función *mostrar_menu()* muestra el menú de opciones y solicita al usuario que seleccione una opción. Dependiendo de la opción elegida, se invoca la función correspondiente para mostrar la categoría de productos correspondiente. Si se selecciona la opción *"5. Todo"*, se muestra el catálogo completo llamando a la función mostrar_todo(). Si se selecciona la opción *"6. Regresar"*, se sale de la función y regresa al punto desde donde se llamó.
+La función *mostrar_menu()* muestra el menú de opciones y solicita al usuario que seleccione una opción. Dependiendo de la opción elegida, se invoca la función correspondiente para mostrar la categoría de productos correspondiente. Si se selecciona la opción *"5. Todo"*, se muestra el catálogo completo llamando a la función *mostrar_todo()*. Si se selecciona la opción *"6. Regresar"*, se sale de la función y regresa al punto desde donde se llamó.
 
 
 Las funciones *mostrar_peliculas()*, *mostrar_series()*, *mostrar_documentales()* y *mostrar_eventos_deportivos()* recorren la lista de productos en *menu.menu_productos* y recopilan los productos que pertenecen a la categoría correspondiente. Luego, imprime los detalles de cada producto utilizando la función *print_producto()*.
@@ -312,29 +315,9 @@ La función *mostrar_todo()* simplemente recorre la lista *menu.menu_productos* 
 La función *print_producto(producto)* imprime los detalles de un producto específico. Muestra el tipo de producto, el título y otros detalles relevantes dependiendo del tipo de producto. Por ejemplo, para películas y series, se muestra el actor principal y el director. Para series, también se muestra el número de temporadas. Para documentales, se muestra el tema. Para eventos deportivos en vivo, se muestra el deporte, la fecha, la hora y el lugar. Además, se muestra el costo de renta y el costo de venta de cada producto.
 
 
-En resumen, este código permite al usuario seleccionar diferentes categorías de productos para mostrar en el catálogo, incluyendo la opción de mostrar todo el catálogo completo. Cada categoría se muestra con sus respectivos detalles y se indica si no hay productos en esa categoría.
+En resumen, este código permite al usuario seleccionar diferentes categorías de productos para mostrar en el catálogo, incluyendo la opción de mostrar todo el catálogo completo. Cada categoría se muestra con sus respectivos detalles y se indica si no hay productos en esta categoría.
 
 
- __7. MAIN:__
-Este código implementa un programa principal que utiliza diferentes módulos para realizar operaciones en un catálogo de productos. A continuación, se explica el flujo del programa:
-
-
-Se importan los módulos necesarios para que el programa pueda funcionar. Los módulos importados son *eliminar, mostrar, menu, buscar, agregar y file*. Estos módulos contienen las funciones y lógica necesaria para realizar operaciones específicas en el catálogo de productos.
-
-
-Se define la función *menu_principal()* que muestra el menú principal del programa. El menú presenta varias opciones para seleccionar, como agregar un producto, buscar un producto, eliminar un producto, mostrar el catálogo, cargar el catálogo desde un archivo y guardar el catálogo en un archivo. Además, hay una opción para salir del programa. El usuario selecciona una opción ingresando el número correspondiente.
-
-
-La función *ejecutar_opcion(opcion)* recibe la opción seleccionada por el usuario y ejecuta la operación correspondiente según la opción seleccionada. Cada opción invoca la función correspondiente del módulo respectivo. Por ejemplo, si la opción es "1", se llama a la función *agregar.menu_agregar()* del módulo agregar para agregar un producto al catálogo.
-
-
-La función *main()* es el punto de entrada del programa. Se ejecuta en un bucle infinito hasta que el usuario seleccione la opción "7" para salir. Dentro del bucle, se muestra el menú principal, se obtiene la opción seleccionada y se ejecuta esa opción llamando a *ejecutar_opcion(opcion)*. Si la opción seleccionada es "7", se rompe el bucle y el programa finaliza.
-
-
-La sentencia *if __name__ == "__main__":* asegura que el código dentro de *main()* se ejecute solo si el módulo se ejecuta como programa principal. Esto evita que el código se ejecute si el módulo se importa en otro lugar.
-
-
-En resumen, este código crea un programa principal que interactúa con el usuario a través de un menú y utiliza diferentes módulos para realizar operaciones en un catálogo de productos, como agregar, buscar, eliminar, mostrar y gestionar el catálogo en archivos.
 
  
 # DIAGRAMA DE ESTRUCTURA
@@ -404,13 +387,14 @@ Cada función realiza las operaciones correspondientes y luego vuelve a menu_pri
 # COMENTARIO
 Durante el desarrollo del proyecto final, nos enfrentamos a diversas dificultades. Inicialmente, al escribir los códigos, a pesar de estos desafíos, perseveramos y mejoramos nuestro código.
 
+
 Decidimos estructurar el proyecto en diferentes módulos. El principal, que contiene todos los módulos, se encarga de gestionar el catálogo. Los módulos se dividen en agregar producto, buscar producto, eliminar producto y archivo para cargar y guardar el catálogo en un archivo.
 
 
-El módulo "agregar producto" nos permite incluir películas, series, documentales o eventos deportivos que no estén en el catálogo. El módulo "buscar producto" nos permite buscar elementos existentes en el catálogo mediante una palabra clave. El módulo "eliminar" se encarga de eliminar productos del catálogo. El módulo "archivo" nos ayuda con la carga y el guardado del catálogo en un archivo.
+El módulo "menu" nos permite seleccionar la opción de incluir películas, series, documentales o eventos deportivos que no estén en el catálogo. El módulo "buscar_elimiar" se divide en dos, la parte “buscar” nos permite encontrar elementos existentes en el catálogo mediante una palabra clave. La segunda parte "eliminar" se encarga de eliminar productos del catálogo. El módulo "file" nos ayuda con la carga y el guardado del catálogo en un archivo.
 
 
-Además, el programa principal presenta un menú que nos permite agregar nuevos productos. El sexto módulo, llamado "mostrar", se encarga de mostrar el catálogo. Nos dimos cuenta en que los módulos antes mencionados se podían agrupar, por lo que quedaron de la siguiente manera con la misma función: *buscar y eliminar, file, menú y mostrar*. Durante la integración de estos módulos en el programa principal, enfrentamos algunas dificultades, ya que en ocasiones no se reconocían correctamente y no obteníamos los resultados esperados. Sin embargo, finalmente logramos cumplir con nuestro objetivo.
+Además, el programa principal presenta un menú que nos permite agregar nuevos productos. El módulo, llamado "mostrar", se encarga de mostrar el catálogo.  Durante la integración de estos módulos en el programa principal, enfrentamos algunas adversidades, ya que en ocasiones no se reconocían correctamente y no obteníamos los resultados esperados. Sin embargo, finalmente logramos cumplir con nuestro objetivo.
 
 
 
