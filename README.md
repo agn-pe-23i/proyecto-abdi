@@ -111,7 +111,7 @@ Título, deporte, fecha, hora, lugar.
 Además, las películas, las series y los documentales tienen un costo de renta o de venta o de ambos. Los eventos deportivos en vivo sólo tienen costo de venta.
 
 
-# DOCUMENTACION
+# DOCUMENTACIÓN
 
 1. agregar
 Este código parece ser un fragmento de un programa que maneja un menú de opciones para agregar diferentes tipos de productos a un catálogo. Veamos el código línea por línea para entenderlo mejor:
