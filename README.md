@@ -117,13 +117,13 @@ Además, las películas, las series y los documentales tienen un costo de renta 
 Este código parece ser un fragmento de un programa que maneja un menú de opciones para agregar diferentes tipos de productos a un catálogo.
 
 
-*import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenarán los productos agregados.
+*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenarán los productos agregados.
 
 
-*def obten_num(msj):* Define una función llamada obten_num que recibe un mensaje (msj) como argumento. Esta función solicita al usuario que ingrese un valor y verifica si el valor ingresado puede ser convertido a un número (en formato float). Si se puede convertir, devuelve el número; de lo contrario, muestra un mensaje de error y solicita nuevamente al usuario que ingrese un número válido.
+*-def obten_num(msj):* Define una función llamada obten_num que recibe un mensaje (msj) como argumento. Esta función solicita al usuario que ingrese un valor y verifica si el valor ingresado puede ser convertido a un número (en formato float). Si se puede convertir, devuelve el número; de lo contrario, muestra un mensaje de error y solicita nuevamente al usuario que ingrese un número válido.
 
 
-*def menu_agregar():* Define una función llamada menu_agregar que muestra un menú de opciones para agregar productos. El usuario debe seleccionar una opción y se ejecutará una función correspondiente según la opción seleccionada. Si la opción seleccionada es "5", la función retorna y vuelve al menú principal.
+*-def menu_agregar():* Define una función llamada menu_agregar que muestra un menú de opciones para agregar productos. El usuario debe seleccionar una opción y se ejecutará una función correspondiente según la opción seleccionada. Si la opción seleccionada es "5", la función retorna y vuelve al menú principal.
 
 
 Las funciones *agregar_pelicula*, *agregar_serie*, *agregar_documental* y *agregar_evento_deportivo* son funciones que se llaman desde la función *menu_agregar* dependiendo de la opción seleccionada por el usuario en el menú. Estas funciones solicitan al usuario que ingrese información específica sobre el tipo de producto que se desea agregar (como título, actor principal, director, etc.). Luego, crean un diccionario con la información ingresada y lo agregan a la lista *menu.menu_productos*, que es una variable definida en el módulo menu importado anteriormente.
@@ -133,108 +133,168 @@ En resumen, este código muestra un menú interactivo donde el usuario puede sel
 
 
 2. Buscar.
-
-   
-Este código es una función que permite buscar productos en un catálogo utilizando una palabra clave. 
-*import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
+Este código es una función que permite buscar productos en un catálogo utilizando una palabra clave.
 
 
-*def buscar_producto():* Define una función llamada buscar_producto. Esta función permite al usuario ingresar una palabra clave para buscar productos en el catálogo.
-
-*clave = input("Ingrese palabra clave: "):* Solicita al usuario que ingrese una palabra clave para realizar la búsqueda. La palabra clave se guarda en la variable clave.
-
-*resultados = []:* Crea una lista vacía llamada resultados donde se almacenarán los productos que coincidan con la búsqueda.
-
-*for producto in menu.menu_productos:* Itera sobre cada producto en la lista menu.menu_productos (que contiene los productos del catálogo).
-
-if clave.lower() in producto["Título"].lower(): Verifica si la palabra clave (en minúsculas) está presente en el título de cada producto del catálogo. La comparación se realiza en minúsculas para hacerla insensible a mayúsculas y minúsculas.
-
-resultados.append(producto): Si el título del producto coincide con la palabra clave, se agrega el producto a la lista resultados.
+*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
 
 
-if len(resultados) > 0:: Verifica si se encontraron resultados de la búsqueda (es decir, si la lista resultados no está vacía).
+*-def buscar_producto():* Define una función llamada buscar_producto. Esta función permite al usuario ingresar una palabra clave para buscar productos en el catálogo.
 
-print(f" Se encontraron {len(resultados)} resultado(s) que coinciden con la búsqueda:"): Muestra un mensaje indicando la cantidad de resultados encontrados.
-Itera sobre cada producto en la lista resultados y muestra información relevante del producto, como el tipo y el título.
 
-else:: Si no se encontraron resultados de la búsqueda, es decir, la lista resultados está vacía.
+*-clave = input("Ingrese palabra clave: "):* Solicita al usuario que ingrese una palabra clave para realizar la búsqueda. La palabra clave se guarda en la variable clave.
 
-print("No se encontraron productos con la búsqueda."): Muestra un mensaje indicando que no se encontraron productos que coincidan con la búsqueda.
+
+*-resultados = []:* Crea una lista vacía llamada resultados donde se almacenarán los productos que coincidan con la búsqueda.
+
+
+*-for producto in menu.menu_productos:* Itera sobre cada producto en la lista menu.menu_productos (que contiene los productos del catálogo).
+
+
+*-if clave.lower() in producto["Título"].lower():* Verifica si la palabra clave (en minúsculas) está presente en el título de cada producto del catálogo. La comparación se realiza en minúsculas para hacerla insensible a mayúsculas y minúsculas.
+
+
+*-resultados.append(producto):* Si el título del producto coincide con la palabra clave, se agrega el producto a la lista resultados.
+
+
+*-if len(resultados) > 0::* Verifica si se encontraron resultados de la búsqueda (es decir, si la lista *resultados* no está vacía).
+
+
+
+*-print(f" Se encontraron {len(resultados)} resultado(s) que coinciden con la búsqueda:"):* Muestra un mensaje indicando la cantidad de resultados encontrados.
+Itera sobre cada producto en la lista *resultados* y muestra información relevante del producto, como el tipo y el título.
+
+
+*-else::* Si no se encontraron resultados de la búsqueda, es decir, la lista resultados está vacía.
+
+
+*print*("No se encontraron productos con la búsqueda."): Muestra un mensaje indicando que no se encontraron productos que coincidan con la búsqueda.
+
 
 En resumen, este código implementa una función que permite buscar productos en un catálogo utilizando una palabra clave. Itera sobre los productos del catálogo y compara la palabra clave con el título de cada producto. Los productos que coincidan se almacenan en una lista de resultados y se muestran al usuario. Si no se encuentran productos que coincidan, se muestra un mensaje indicando que no se encontraron resultados.
+
+
 3. Eliminar. 
 Este código es una función que permite eliminar un producto del catálogo. 
-import menu: Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
-def eliminar_producto(): Define una función llamada eliminar_producto. Esta función permite al usuario ingresar el título del producto que desea eliminar del catálogo.
-
-titulo = input("Ingrese el título del producto que desea eliminar: "): Solicita al usuario que ingrese el título del producto que desea eliminar. El título se guarda en la variable titulo.
-
-for producto in menu.menu_productos:: Itera sobre cada producto en la lista menu.menu_productos (que contiene los productos del catálogo).
-
-if producto["Título"] == titulo:: Verifica si el título del producto actual coincide con el título ingresado por el usuario.
 
 
+*-import menu:* Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
 
-menu.menu_productos.remove(producto): Si se encuentra un producto con el título ingresado, se elimina el producto de la lista menu.menu_productos utilizando el método remove().
 
-print("El producto fue eliminado."): Muestra un mensaje indicando que el producto ha sido eliminado.
+*-def eliminar_producto():* Define una función llamada eliminar_producto. Esta función permite al usuario ingresar el título del producto que desea eliminar del catálogo.
 
-return: Retorna de la función después de eliminar el producto. Esto evita que se siga iterando sobre los productos restantes en el catálogo.
 
-print("No se encontró producto."): Si no se encontró un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
+*-titulo = input("Ingrese el título del producto que desea eliminar: "):* Solicita al usuario que ingrese el título del producto que desea eliminar. El título se guarda en la variable *titulo*.
+
+
+*-for producto in menu.menu_productos::* Itera sobre cada producto en la lista *menu.menu_productos* (que contiene los productos del catálogo).
+
+
+*-if producto["Título"] == titulo::* Verifica si el título del producto actual coincide con el título ingresado por el usuario.
+
+
+*-menu.menu_productos.remove(producto):* Si se encuentra un producto con el título ingresado, se elimina el producto de la lista *menu.menu_productos* utilizando el método *remove()*.
+
+
+*-print("El producto fue eliminado."):* Muestra un mensaje indicando que el producto ha sido eliminado.
+
+
+*-return:* Retorna de la función después de eliminar el producto. Esto evita que se siga iterando sobre los productos restantes en el catálogo.
+
+
+*-print("No se encontró producto."):* Si no se encontró un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
+
 
 En resumen, este código implementa una función que permite eliminar un producto del catálogo. Itera sobre los productos del catálogo y compara el título de cada producto con el título ingresado por el usuario. Si se encuentra un producto con el título coincidente, se elimina de la lista de productos. Si no se encuentra un producto con el título ingresado, se muestra un mensaje indicando que no se encontró el producto.
+
+
  4. File
 Este código define dos funciones relacionadas con la carga y el guardado de un catálogo en un archivo. 
-import menu: Importa un módulo llamado menu. Este módulo contiene la definición de la variable menu_productos, que es donde se almacenan los productos del catálogo.
-
-def cargar_catalogo(): Define una función llamada cargar_catalogo. Esta función permite cargar un catálogo desde un archivo.
-
-nombre_archivo = input("Ingrese el nombre del archivo: "): Solicita al usuario que ingrese el nombre del archivo desde el cual se desea cargar el catálogo. El nombre del archivo se guarda en la variable nombre_archivo.
-
-try:: Inicia un bloque try-except para manejar excepciones.
-
-with open(nombre_archivo, "r") as archivo:: Abre el archivo especificado por el nombre ingresado en modo de lectura ("r") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
 
 
-menu.menu_productos = eval(archivo.read()): Lee el contenido del archivo y utiliza la función eval() para evaluarlo como una expresión de Python. Se asume que el contenido del archivo es una representación válida de la lista menu.menu_productos. El resultado de la evaluación se asigna a la variable menu.menu_productos, sobrescribiendo el contenido anterior del catálogo.
+*-import menu:* Importa un módulo llamado *menu*. Este módulo contiene la definición de la variable *menu_productos*, que es donde se almacenan los productos del catálogo.
 
-print("El catálogo se ha cargado."): Muestra un mensaje indicando que el catálogo se ha cargado correctamente. . except FileNotFoundError:: Captura la excepción FileNotFoundError que se produce cuando el archivo especificado no se encuentra.
 
-print("catalogo no existe."): Muestra un mensaje indicando que el archivo del catálogo no existe.
+*-def cargar_catalogo():* Define una función llamada *cargar_catalogo*. Esta función permite cargar un catálogo desde un archivo.
 
-except:: Captura cualquier otra excepción que no sea FileNotFoundError.
-print("Ocurrió un error."): Muestra un mensaje genérico indicando que ocurrió un error al cargar el catálogo.
 
-def guardar_catalogo(): Define una función llamada guardar_catalogo. Esta función permite guardar el catálogo en un archivo. 
+*-nombre_archivo = input("Ingrese el nombre del archivo: "):* Solicita al usuario que ingrese el nombre del archivo desde el cual se desea cargar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
 
-nombre_archivo = input("Ingrese el nombre del archivo: "): Solicita al usuario que ingrese el nombre del archivo en el cual se desea guardar el catálogo. El nombre del archivo se guarda en la variable nombre_archivo.
 
-try:: Inicia un bloque try-except para manejar excepciones.
+*-try:*: Inicia un bloque try-except para manejar excepciones.
 
-with open(nombre_archivo, "w") as archivo:: Abre el archivo especificado por el nombre ingresado en modo de escritura ("w") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
 
-archivo.write(str(menu.menu_productos)): Escribe una representación en forma de cadena (str) de la lista menu.menu_productos en el archivo.
+*-with open(nombre_archivo, "r") as archivo:*: Abre el archivo especificado por el nombre ingresado en modo de lectura ("r") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
 
-print("Se ha guardado correctamente."): Muestra un mensaje indicando que el catálogo se ha guardado correctamente en el archivo.
 
-except:: Captura cualquier excepción que se produzca durante el guardado del catálogo.
+*-menu.menu_productos = eval(archivo.read()):* Lee el contenido del archivo y utiliza la función *eval()* para evaluarlo como una expresión de Python. Se asume que el contenido del archivo es una representación válida de la lista *menu.menu_productos*. El resultado de la evaluación se asigna a la variable *menu.menu_productos*, sobrescribiendo el contenido anterior del catálogo.
 
-print("Ocurrió un error."): Muestra un mensaje genérico indicando que ocurrió un error al guardar el catálogo.
 
-En resumen, este código define dos funciones: cargar_catalogo() para cargar un catálogo desde un archivo y sobrescribir el contenido anterior del catálogo, y guardar_catalogo() para guardar el catálogo actual en un archivo. Ambas funciones manejan excepciones para mostrar mensajes de error en caso de problemas durante la carga o el guardado del catálogo.
+*-print("El catálogo se ha cargado."):* Muestra un mensaje indicando que el catálogo se ha cargado correctamente. . except FileNotFoundError:: Captura la excepción FileNotFoundError que se produce cuando el archivo especificado no se encuentra.
 
-Menú:
-Este código implementa un menú interactivo para agregar nuevos productos a una lista llamada menu_productos. Los productos pueden ser películas, series, documentales o eventos deportivos en vivo.
+
+*print("catalogo no existe."):* Muestra un mensaje indicando que el archivo del catálogo no existe.
+
+
+*-except:*: Captura cualquier otra excepción que no sea FileNotFoundError.
+
+
+*-print("Ocurrió un error."):* Muestra un mensaje genérico indicando que ocurrió un error al cargar el catálogo.
+
+
+*-def guardar_catalogo():* Define una función llamada *guardar_catalogo*. Esta función permite guardar el catálogo en un archivo. 
+
+
+*-nombre_archivo = input("Ingrese el nombre del archivo: "):* Solicita al usuario que ingrese el nombre del archivo en el cual se desea guardar el catálogo. El nombre del archivo se guarda en la variable *nombre_archivo*.
+
+
+*-try:*: Inicia un bloque try-except para manejar excepciones.
+
+
+*-with open(nombre_archivo, "w") as archivo:*: Abre el archivo especificado por el nombre ingresado en modo de escritura ("w") utilizando el contexto with, lo que garantiza que el archivo se cierre correctamente al finalizar.
+
+
+*-archivo.write(str(menu.menu_productos)):* Escribe una representación en forma de cadena (str) de la lista *menu.menu_productos* en el archivo.
+
+
+*-print("Se ha guardado correctamente."):* Muestra un mensaje indicando que el catálogo se ha guardado correctamente en el archivo.
+
+
+*-except:*: Captura cualquier excepción que se produzca durante el guardado del catálogo.
+
+
+*print("Ocurrió un error."):* Muestra un mensaje genérico indicando que ocurrió un error al guardar el catálogo.
+
+
+En resumen, este código define dos funciones: *cargar_catalogo()* para cargar un catálogo desde un archivo y sobrescribir el contenido anterior del catálogo, y *guardar_catalogo()* para guardar el catálogo actual en un archivo. Ambas funciones manejan excepciones para mostrar mensajes de error en caso de problemas durante la carga o el guardado del catálogo.
+
+
+5. Menú:
+Este código implementa un menú interactivo para agregar nuevos productos a una lista llamada *menu_productos*. Los productos pueden ser películas, series, documentales o eventos deportivos en vivo.
 El código comienza definiendo una lista vacía llamada menu_productos que se utilizará para almacenar los productos ingresados por el usuario.
 A continuación, se definen varias funciones para agregar diferentes tipos de productos:
-La función agregar_producto() muestra un menú con opciones para seleccionar el tipo de producto a agregar. Dependiendo de la opción elegida, se invoca la función correspondiente para agregar ese tipo de producto.
-La función agregar_pelicula() solicita al usuario ingresar los datos de una película, como el título, el actor principal, el director, el año, el costo de renta y el costo de venta. Luego, crea un diccionario con esos datos y lo agrega a la lista menu_productos.
-La función agregar_serie() funciona de manera similar a agregar_pelicula(), pero solicita los datos específicos de una serie, como el número de temporadas.
-La función agregar_documental() solicita al usuario ingresar los datos de un documental, como el título, el director, el tema, el año, el costo de renta y el costo de venta. Luego, agrega un diccionario con esos datos a la lista menu_productos.
-La función agregar_evento_deportivo() solicita al usuario ingresar los datos de un evento deportivo en vivo, como el título, el deporte, la fecha, la hora, el lugar y el costo de venta. Luego, agrega un diccionario con esos datos a la lista menu_productos.
+
+
+La función *agregar_producto()* muestra un menú con opciones para seleccionar el tipo de producto a agregar. Dependiendo de la opción elegida, se invoca la función correspondiente para agregar ese tipo de producto.
+
+
+La función *agregar_pelicula()* solicita al usuario ingresar los datos de una película, como el título, el actor principal, el director, el año, el costo de renta y el costo de venta. Luego, crea un diccionario con esos datos y lo agrega a la lista *menu_productos*.
+
+
+La función *agregar_serie()* funciona de manera similar a *agregar_pelicula()*, pero solicita los datos específicos de una serie, como el número de temporadas.
+
+
+La función *agregar_documental()* solicita al usuario ingresar los datos de un documental, como el título, el director, el tema, el año, el costo de renta y el costo de venta. Luego, agrega un diccionario con esos datos a la lista *menu_productos*.
+
+
+La función *agregar_evento_deportivo()* solicita al usuario ingresar los datos de un evento deportivo en vivo, como el título, el deporte, la fecha, la hora, el lugar y el costo de venta. Luego, agrega un diccionario con esos datos a la lista *menu_productos*.
+
+
 Cada función de agregar producto imprime un mensaje indicando que el producto ha sido agregado exitosamente.
-En general, este código permite al usuario agregar productos a la lista menu_productos seleccionando el tipo de producto y proporcionando los detalles específicos de cada tipo de producto.
+
+
+En general, este código permite al usuario agregar productos a la lista *menu_productos* seleccionando el tipo de producto y proporcionando los detalles específicos de cada tipo de producto.
+
 
 Mostrar.
 Este código implementa un menú interactivo para mostrar el catálogo de productos. El catálogo es proporcionado por el módulo menu (que no se muestra en el código proporcionado, pero contiene una lista llamada menu_productos con los productos).
